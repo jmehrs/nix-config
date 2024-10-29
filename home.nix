@@ -2,8 +2,11 @@
 
 {
   imports = [
-    ../user/sh.nix
-    ../user/apps/git.nix
+    ./user/shell/sh.nix
+
+    # Maybe bundle the apps together into 1 import
+    ./user/apps/git.nix
+    ./user/apps/htop.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

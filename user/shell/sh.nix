@@ -20,6 +20,15 @@ in
   programs.zsh = {
     enable = true;
     shellAliases = myAliases;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "sudo" ];
+      theme = "agnoster"; # blinks is also really nice
+    };
   };   
 
   # Collection of useful CLI apps
@@ -30,5 +39,7 @@ in
   ];
 
 }
+
+
 
 
