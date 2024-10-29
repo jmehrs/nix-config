@@ -6,8 +6,10 @@ let
     htop = "btm";
     fd = "fd -Lu";
     grep = "rg";
-    fetch = "disfetch";
+    fetch = "fastfetch";
     gitfetch = "onefetch";
+    v = "nvim";
+    vim = "nvim";
   };
 in
 {
@@ -24,6 +26,9 @@ in
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    history.size = 10000;
+    history.path = "${config.xdg.dataHome}/zsh/history";
+
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "sudo" ];
@@ -34,7 +39,7 @@ in
   # Collection of useful CLI apps
   home.packages = with pkgs; [
     # Command Line
-    disfetch onefetch
+    fastfetch onefetch
     bat eza fd bottom ripgrep
   ];
 
