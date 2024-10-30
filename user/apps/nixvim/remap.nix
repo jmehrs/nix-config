@@ -14,7 +14,6 @@
         })
         {
           # Ported from old config
-          #"<leader>pv" = ":E<CR>";
           "<leader>pv".__raw = ''
             function()
               vim.cmd.Ex()
